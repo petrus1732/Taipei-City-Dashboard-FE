@@ -32,3 +32,9 @@ firebase.json
 
 dist.tar.gz
 *.sh
+
+# some files YSQ needs
+src/func.py
+src/hackathon_workshop_ETL.ipynb
+src/tp_building_height84.geojson
+src/臺北程式設計節黑客松-工作坊簡報.pdf
