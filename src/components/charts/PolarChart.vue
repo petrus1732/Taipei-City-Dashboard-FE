@@ -151,7 +151,7 @@ const chartOptions = ref({
 <template>
 	<div v-if="activeChart === 'PolarChart'">
 		<apexchart
-			width="100%"
+			width="90%"
 			type="polarArea"
 			:options="chartOptions"
 			:series="parsedSeries"
