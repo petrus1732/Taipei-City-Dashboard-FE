@@ -45,6 +45,51 @@
 			"tags": [],
 			"contributors": ["tuic"]
 		},
+		"201": {
+			"id": 201,
+			"index": "unsafety-zone",
+			"chart_config": {
+				"types": ["HeatmapChart", "BarPercentChart"],
+				"categories": [
+					"國小畢業",
+					"國中畢業",
+					"高中畢業",
+					"專科畢業",
+					"大學畢業",
+					"碩士畢業",
+					"博士畢業"
+				],
+				"color": [
+					"#b9b929",
+					"#87a11a",
+					"#87a11a",
+					"#568811",
+					"#568811",
+					"#568811",
+					"#568811",
+					"#236e0c",
+					"#236e0c",
+					"#236e0c",
+					"#236e0c",
+					"#113011"
+				],
+				"unit": "生育胎次"
+			},
+			"map_config": null,
+			"name": "",
+			"source": "臺北大數據中心",
+			"time_from": "2023-07-28T00:00:00+08:00",
+			"time_to": null,
+			"short_desc": "",
+			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"use_case": "",
+			"links": [
+				"https://tuic.gov.taipei/youbike",
+				"https://github.com/tpe-doit/YouBike-Optimization"
+			],
+			"tags": [],
+			"contributors": ["tuic"]
+		},
 		"5": {
 			"id": 5,
 			"index": "circular",
