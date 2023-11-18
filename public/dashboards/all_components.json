@@ -72,17 +72,25 @@
 					"title": "危險地點"
 				},
 				{
-					"index": "public_kindergarten_pos",
+					"index": "all_kindergarten",
 					"property": [
 						{
-							"key": "校園名稱",
+							"key": "name",
 							"name": "校園名稱"
 						},
-						{ "key": "實際就讀人數", "name": "就讀人數" }
+						{
+							"key": "type",
+							"name": "類型"
+						},
+						{
+							"key": "telephone",
+							"name": "電話"
+						},
+						{ "key": "people", "name": "容量" }
 					],
 					"type": "symbol",
 					"icon": "kindergarten",
-					"title": "公立幼兒園"
+					"title": "幼兒園"
 				}
 			],
 			"name": "危險地點與公立幼兒園",
@@ -143,8 +151,8 @@
 			"id": 203,
 			"index": "kindergarten_enrollment",
 			"chart_config": {
-				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
-				"types": ["ColumnChart", "DistrictChart"],
+				"color": ["#7febd0", "#b7e28e", "#9c7a3e", "#8ce8ff"],
+				"types": ["ColumnChart", "DistrictChart", "PyramidChart"],
 				"categories": [
 					"北投區",
 					"士林區",
@@ -176,7 +184,8 @@
 						"文山"
 					]
 				],
-				"unit": "人"
+				"unit": "人",
+				"name": ["2歲專班使用比例", "3-5歲班使用比例"]
 			},
 			"map_config": null,
 			"name": "幼兒園註冊比例",
@@ -199,38 +208,24 @@
 			"chart_config": {
 				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
 				"types": ["ColumnChart", "DistrictChart"],
-				"categories": [
-					"北投區",
-					"士林區",
-					"內湖區",
-					"南港區",
-					"松山區",
-					"信義區",
-					"中山區",
-					"大同區",
-					"中正區",
-					"萬華區",
-					"大安區",
-					"文山區"
-				],
 				"map_filter": [
-					"c_name",
+					"行政區",
 					[
-						"北投",
-						"士林",
-						"內湖",
-						"南港",
-						"松山",
-						"信義",
-						"中山",
-						"大同",
-						"中正",
-						"萬華",
-						"大安",
-						"文山"
+						"北投區",
+						"士林區",
+						"內湖區",
+						"南港區",
+						"松山區",
+						"信義區",
+						"中山區",
+						"大同區",
+						"中正區",
+						"萬華區",
+						"大安區",
+						"文山區"
 					]
 				],
-				"unit": "人"
+				"unit": "座"
 			},
 			"map_config": [
 				{
@@ -247,10 +242,14 @@
 						{
 							"key": "開放時間",
 							"name": "開放時間"
+						},
+						{
+							"key": "行政區",
+							"name": "行政區"
 						}
 					],
 					"type": "symbol",
-					"icon": "triangle_white",
+					"icon": "lactation_room",
 					"title": "哺集乳室"
 				}
 			],
@@ -4319,7 +4318,7 @@
 			"id": 150,
 			"index": "polar_test",
 			"map_config": null,
-			"history_data": true,
+			"history_data": false,
 			"chart_config": {
 				"color": [
 					"#C5E1A5",
