@@ -110,7 +110,9 @@
 					"#6A5ACD",
 					"#7B68EE",
 					"#8A2BE2",
-					"#9400D3"
+					"#9400D3",
+					"#8B008B",
+					"#800080"
 				],
 				"types": ["TimelineStackedChart", "TimelineSeparateChart"],
 				"unit": "‰",
@@ -193,10 +195,10 @@
 		},
 		"204": {
 			"id": 204,
-			"index": "kindergarten_bartest",
+			"index": "lactation_room",
 			"chart_config": {
-				"color": ["#b7e28e", "#8ce8ff"],
-				"types": ["BarChartRatio", "ColumnChart"],
+				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
+				"types": ["ColumnChart", "DistrictChart"],
 				"categories": [
 					"北投區",
 					"士林區",
@@ -230,8 +232,29 @@
 				],
 				"unit": "人"
 			},
-			"map_config": null,
-			"name": "幼兒園註冊比例(測試用)",
+			"map_config": [
+				{
+					"index": "lactation_room",
+					"property": [
+						{
+							"key": "機構名稱",
+							"name": "名稱"
+						},
+						{
+							"key": "電話",
+							"name": "電話"
+						},
+						{
+							"key": "開放時間",
+							"name": "開放時間"
+						}
+					],
+					"type": "symbol",
+					"icon": "triangle_white",
+					"title": "哺集乳室"
+				}
+			],
+			"name": "哺集乳室",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,

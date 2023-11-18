@@ -3,7 +3,7 @@
 		{
 			"name": "住你好孕",
 			"index": "pregancy-good",
-			"components": ["200", "202", "203"],
+			"components": ["200", "201", "202", "203", "204"],
 			"icon": "crib"
 		},
 		{
