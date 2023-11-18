@@ -78,14 +78,19 @@
 			"map_config": [
 				{
 					"index": "unsafety_zone",
-					"property": [],
-					"paint": {
-						"circle-color": "#3f51b5",
-						"circle-radius": 100
-					},
-					"type": "circle",
-					"title": "消防栓",
-					"icon": null
+					"property": [
+						{
+							"key": "地點位置",
+							"name": "地點位置"
+						},
+						{
+							"key": "管轄分局",
+							"name": "管轄分局"
+						}
+					],
+					"type": "symbol",
+					"icon": "danger_zone",
+					"title": "危險地點"
 				}
 			],
 			"name": "危險區域",
