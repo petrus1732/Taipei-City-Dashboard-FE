@@ -290,7 +290,39 @@ export const maplayerCommonLayout = {
 		"icon-image": "danger_zone",
 	},
 	"symbol-kindergarten": {
-		"icon-image": "kindergarten",
+		"icon-image": [
+			"case",
+			["==", ["get", "type"], "公立"],
+			"goverment",
+			["==", ["get", "type"], "私立"],
+			"private_school",
+			"nonprofit",
+		],
+	},
+	"symbol-lactation_room": {
+		"icon-image": [
+			"case",
+			[
+				"all",
+				["==", ["get", "可提供輪椅媽媽使用"], "是"],
+				[">", ["get", "goodLength"], ["get", "halfTotalLength"]],
+			],
+			"nice_good_lactation_room",
+			[
+				"all",
+				["==", ["get", "可提供輪椅媽媽使用"], "是"],
+				["<=", ["get", "goodLength"], ["get", "halfTotalLength"]],
+			],
+			"nice_normal_lactation_room",
+			[
+				"all",
+				["!=", ["get", "可提供輪椅媽媽使用"], "是"],
+				[">", ["get", "goodLength"], ["get", "halfTotalLength"]],
+			],
+			"alert_good_lactation_room",
+			"alert_normal_lactation_room",
+		],
+		"icon-size": 0.8,
 	},
 	"symbol-youbike": {
 		"icon-image": [
@@ -301,17 +333,7 @@ export const maplayerCommonLayout = {
 			"bike_orange",
 			"bike_green",
 		],
-		"icon-size": [
-			"interpolate",
-			["linear"],
-			["zoom"],
-			11.99,
-			1,
-			14,
-			1.5,
-			22,
-			2,
-		],
+		"icon-size": 0.8,
 	},
 	"symbol-bus": {
 		"icon-image": "bus",
