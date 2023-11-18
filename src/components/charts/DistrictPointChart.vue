@@ -6,11 +6,32 @@ const props = defineProps(['chart_config', 'activeChart', 'series', 'map_config'
 const mapStore = useMapStore();
 
 const targetDistrict = ref(null);
-const districtColor = ref(props.chart_config.color[0]);
+const districtColor = '#eeeeee'
 const mousePosition = ref({ x: null, y: null });
 const selectedIndex = ref(null);
+const activeData = ref([]);
+const activeDataPoints = ref([]);
+
+props.series.forEach(() => {
+	activeData.value.push(true)
+})
+
+//add color to each point
+const coloredPoints = [];
+props.series.forEach((serie, i) => {
+	coloredPoints.push([]);
+	serie.forEach(p => {
+		coloredPoints[i].push({
+			lng: p.lng,
+			lat: p.lat,
+			color: props.chart_config.color[i]
+		})
+	})
+})
+
+activeDataPoints.value = computed(() => coloredPoints.filter((d, i) => activeData.value[i]))
 // the base points of 北投區 and 文山區
-/*
+
 const crd1 = {
 	x: 121.50364,
 	y: 25.09652
@@ -28,7 +49,11 @@ const svg2 = {
 	y: 544.82851
 };
 
-const scale = (svg1.y - svg2.y)/ (crd1.y - crd2.y);*/
+const scale = (svg1.y - svg2.y)/ (crd1.y - crd2.y);
+const toSvg = {
+	lng: x => (x - crd1.x) * scale + svg1.x,
+	lat: y => (y - crd1.y) * scale + svg1.y
+}
 
 // Parse District Data (to support 2D or 3D data)
 const districtData = computed(() => {
@@ -102,6 +127,7 @@ function handleDataSelection(index) {
 			<div></div>
 			<svg viewBox="0 0 413 550" xmlns="http://www.w3.org/2000/svg">
 				<g>
+					<circle v-for="(p, index) in activeDataPoints.value" :key="index" :cx="toSvg(p.x)" :cy="toSvg(p.y)" :fill="p.color" r="1" stroke-width="0"/>
 					<path data-name="北投區"
 						:class="{ 'active-district': targetDistrict === '北投區' || selectedIndex === 0, 'initial-animation-1': true }"
 						@mouseenter="toggleActive" @mousemove="updateMouseLocation" @mouseleave="toggleActiveToNull"
