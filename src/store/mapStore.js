@@ -123,7 +123,11 @@ export const useMapStore = defineStore("map", {
 				"bike_orange",
 				"bike_red",
 				"danger_zone",
-				"kindergarten"
+				"kindergarten",
+				"nice_normal_lactation_room",
+				"nice_good_lactation_room",
+				"alert_good_lactation_room",
+				"alert_normal_lactation_room",
 			];
 			images.forEach((element) => {
 				this.map.loadImage(
