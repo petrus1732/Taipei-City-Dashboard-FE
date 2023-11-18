@@ -107,12 +107,16 @@ const parsedLabels = computed(() => {
 const chartOptions = ref({
 	chart: {
 		type: "polarArea",
+		toolbar: {
+			show: false,
+		},
 	},
 	colors: props.chart_config.color,
 	grid: {
 		show: false,
 	},
 	legend: {
+		show: false,
 		position: "bottom",
 	},
 	plotOptions: {
@@ -151,7 +155,7 @@ const chartOptions = ref({
 <template>
 	<div v-if="activeChart === 'PolarChart'">
 		<apexchart
-			width="90%"
+			width="100%"
 			type="polarArea"
 			:options="chartOptions"
 			:series="parsedSeries"

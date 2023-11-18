@@ -143,8 +143,8 @@
 			"id": 203,
 			"index": "kindergarten_enrollment",
 			"chart_config": {
-				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
-				"types": ["ColumnChart", "DistrictChart"],
+				"color": ["#7febd0", "#b7e28e", "#9c7a3e", "#8ce8ff"],
+				"types": ["ColumnChart", "DistrictChart", "PyramidChart"],
 				"categories": [
 					"北投區",
 					"士林區",
@@ -4309,7 +4309,7 @@
 			"id": 150,
 			"index": "polar_test",
 			"map_config": null,
-			"history_data": true,
+			"history_data": false,
 			"chart_config": {
 				"color": [
 					"#C5E1A5",
