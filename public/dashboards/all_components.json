@@ -3,6 +3,7 @@
 		"200": {
 			"id": 200,
 			"index": "parity",
+			"history_data": true,
 			"chart_config": {
 				"types": ["HeatmapChart", "BarPercentChart"],
 				"categories": [
@@ -109,7 +110,9 @@
 					"#6A5ACD",
 					"#7B68EE",
 					"#8A2BE2",
-					"#9400D3"
+					"#9400D3",
+					"#8B008B",
+					"#800080"
 				],
 				"types": ["TimelineStackedChart", "TimelineSeparateChart"],
 				"unit": "‰",
@@ -177,6 +180,81 @@
 			},
 			"map_config": null,
 			"name": "幼兒園註冊比例",
+			"source": "臺北大數據中心",
+			"time_from": "2023-07-28T00:00:00+08:00",
+			"time_to": null,
+			"short_desc": "",
+			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"use_case": "",
+			"links": [
+				"https://tuic.gov.taipei/youbike",
+				"https://github.com/tpe-doit/YouBike-Optimization"
+			],
+			"tags": [],
+			"contributors": ["tuic"]
+		},
+		"204": {
+			"id": 204,
+			"index": "lactation_room",
+			"chart_config": {
+				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
+				"types": ["ColumnChart", "DistrictChart"],
+				"categories": [
+					"北投區",
+					"士林區",
+					"內湖區",
+					"南港區",
+					"松山區",
+					"信義區",
+					"中山區",
+					"大同區",
+					"中正區",
+					"萬華區",
+					"大安區",
+					"文山區"
+				],
+				"map_filter": [
+					"c_name",
+					[
+						"北投",
+						"士林",
+						"內湖",
+						"南港",
+						"松山",
+						"信義",
+						"中山",
+						"大同",
+						"中正",
+						"萬華",
+						"大安",
+						"文山"
+					]
+				],
+				"unit": "人"
+			},
+			"map_config": [
+				{
+					"index": "lactation_room",
+					"property": [
+						{
+							"key": "機構名稱",
+							"name": "名稱"
+						},
+						{
+							"key": "電話",
+							"name": "電話"
+						},
+						{
+							"key": "開放時間",
+							"name": "開放時間"
+						}
+					],
+					"type": "symbol",
+					"icon": "triangle_white",
+					"title": "哺集乳室"
+				}
+			],
+			"name": "哺集乳室",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
