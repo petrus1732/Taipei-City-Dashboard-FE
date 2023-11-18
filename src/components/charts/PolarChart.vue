@@ -107,6 +107,9 @@ const parsedLabels = computed(() => {
 const chartOptions = ref({
 	chart: {
 		type: "polarArea",
+		toolbar: {
+			show: false,
+		},
 	},
 	colors: props.chart_config.color,
 	grid: {
