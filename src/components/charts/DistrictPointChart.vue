@@ -10,6 +10,7 @@ const districtColor = ref(props.chart_config.color[0]);
 const mousePosition = ref({ x: null, y: null });
 const selectedIndex = ref(null);
 // the base points of 北投區 and 文山區
+/*
 const crd1 = {
 	x: 121.50364,
 	y: 25.09652
@@ -27,36 +28,30 @@ const svg2 = {
 	y: 544.82851
 };
 
-const scale = (svg1.y - svg2.y)/ (crd1.y - crd2.y);
+const scale = (svg1.y - svg2.y)/ (crd1.y - crd2.y);*/
 
 // Parse District Data (to support 2D or 3D data)
 const districtData = computed(() => {
 	let output = {};
-	let highest = 0;
-	let sum = 0;
-	if (props.series.length === 1) {
-		props.series[0].data.forEach((item) => {
-			output[item.x] = item.y;
-			if (item.y > highest) {
-				highest = item.y;
-			}
-			sum += item.y;
-		});
-	} else {
-		props.series.forEach((serie) => {
-			for (let i = 0; i < 12; i++) {
-				if (!output[props.chart_config.categories[i]]) {
-					output[props.chart_config.categories[i]] = 0;
+	props.series.forEach((serie) => {
+		let highest = 0;
+		let sum = 0;
+		let name = {}
+		if (serie.type !== "point"){
+			serie.data.district.forEach((item) => {
+				name[item.x] = item.y;
+				if (item.y > highest) {
+					highest = item.y;
 				}
-				output[props.chart_config.categories[i]] += +serie.data[i];
-			}
-		});
-		highest = Object.values(output).sort(function (a, b) { return b - a; })[0];
-		sum = Object.values(output).reduce((partialSum, a) => partialSum + a, 0);
-	}
-
-	output.highest = highest;
-	output.sum = sum;
+				sum += item.y;
+			})
+			highest = Object.values(name).sort(function (a, b) { return b - a; })[0];
+			sum = Object.values(name).reduce((partialSum, a) => partialSum + a, 0);
+			name.highest = highest;
+			name.sum = sum;
+		}
+		output[serie.name] = name
+	});
 	return output;
 });
 const tooltipPosition = computed(() => {
@@ -89,17 +84,22 @@ function handleDataSelection(index) {
 </script>
 
 <template>
-	<div v-if="activeChart === 'DistrictChart'" class="districtchart">
+	<div v-if="activeChart === 'DistrictPointChart'" class="districtchart">
 		<div class="districtchart-title">
 			<h5>總合</h5>
 			<h6>{{ districtData.sum }} {{ chart_config.unit }}</h6>
 			<div class="districtchart-title-legend">
 				<p>多</p>
-				<div :style="{ backgroundColor: props.chart_config.color[0] }"></div>
+				<div :style="{ backgroundColor: props.chart_config.color[0]}"></div>
 				<p>少</p>
+			</div>
+			<div class="districtchart-title-legends" v-for="(value, index) in props.series" :key="index">
+				<span class="districtchart-title-legends-icon" :style="{ backgroundColor: props.chart_config.color[index]}"></span>
+				<span>{{value.name}}</span>
 			</div>
 		</div>
 		<div class="districtchart-chart">
+			<div></div>
 			<svg viewBox="0 0 413 550" xmlns="http://www.w3.org/2000/svg">
 				<g>
 					<path data-name="北投區"
@@ -236,6 +236,24 @@ function handleDataSelection(index) {
 			p {
 				color: var(--color-complement-text)
 			}
+		}
+		&-legends {
+			display: flex;
+			justify-content: flex-start;
+			margin-top: 20px;
+			span {
+				color: var(--color-complement-text);
+				height: 14px;
+				font-size: 12px;
+			}
+			&-icon {
+				width: 14px;
+				border-radius: 50%;
+				margin-right: 2px;
+			}
+		}
+		&-legends:hover {
+			cursor: pointer;
 		}
 	}
 

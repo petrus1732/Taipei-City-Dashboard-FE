@@ -50,8 +50,8 @@
 			"id": 201,
 			"index": "unsafety-zone",
 			"chart_config": {
-				"color": ["#9072bc"],
-				"types": ["DistrictChart", "RadarChart", "ColumnChart"],
+				"color": ["#9072bc", "#0072bc", "#909220", "#a00000"] ,
+				"types": ["DistrictPointChart"],
 				"unit": "件"
 			},
 			"map_config": [
