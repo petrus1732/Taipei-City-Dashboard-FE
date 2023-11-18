@@ -3,6 +3,7 @@
 		"200": {
 			"id": 200,
 			"index": "parity",
+			"history_data": true,
 			"chart_config": {
 				"types": ["HeatmapChart", "BarPercentChart"],
 				"categories": [
@@ -109,7 +110,9 @@
 					"#6A5ACD",
 					"#7B68EE",
 					"#8A2BE2",
-					"#9400D3"
+					"#9400D3",
+					"#8B008B",
+					"#800080"
 				],
 				"types": ["TimelineStackedChart", "TimelineSeparateChart"],
 				"unit": "‰",
