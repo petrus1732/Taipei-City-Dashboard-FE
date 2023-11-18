@@ -3,6 +3,7 @@
 		"200": {
 			"id": 200,
 			"index": "parity",
+			"history_data": true,
 			"chart_config": {
 				"types": ["HeatmapChart", "BarPercentChart"],
 				"categories": [
@@ -49,31 +50,9 @@
 			"id": 201,
 			"index": "unsafety-zone",
 			"chart_config": {
-				"types": ["HeatmapChart", "BarPercentChart"],
-				"categories": [
-					"國小畢業",
-					"國中畢業",
-					"高中畢業",
-					"專科畢業",
-					"大學畢業",
-					"碩士畢業",
-					"博士畢業"
-				],
-				"color": [
-					"#b9b929",
-					"#87a11a",
-					"#87a11a",
-					"#568811",
-					"#568811",
-					"#568811",
-					"#568811",
-					"#236e0c",
-					"#236e0c",
-					"#236e0c",
-					"#236e0c",
-					"#113011"
-				],
-				"unit": "生育胎次"
+				"color": ["#9072bc"],
+				"types": ["DistrictChart", "RadarChart", "ColumnChart"],
+				"unit": "件"
 			},
 			"map_config": [
 				{
@@ -145,6 +124,60 @@
 			},
 			"map_config": null,
 			"name": "幼兒年齡占比",
+			"source": "臺北大數據中心",
+			"time_from": "2023-07-28T00:00:00+08:00",
+			"time_to": null,
+			"short_desc": "",
+			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"use_case": "",
+			"links": [
+				"https://tuic.gov.taipei/youbike",
+				"https://github.com/tpe-doit/YouBike-Optimization"
+			],
+			"tags": [],
+			"contributors": ["tuic"]
+		},
+		"203": {
+			"id": 203,
+			"index": "kindergarten_enrollment",
+			"chart_config": {
+				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
+				"types": ["ColumnChart", "DistrictChart"],
+				"categories": [
+					"北投區",
+					"士林區",
+					"內湖區",
+					"南港區",
+					"松山區",
+					"信義區",
+					"中山區",
+					"大同區",
+					"中正區",
+					"萬華區",
+					"大安區",
+					"文山區"
+				],
+				"map_filter": [
+					"c_name",
+					[
+						"北投",
+						"士林",
+						"內湖",
+						"南港",
+						"松山",
+						"信義",
+						"中山",
+						"大同",
+						"中正",
+						"萬華",
+						"大安",
+						"文山"
+					]
+				],
+				"unit": "人"
+			},
+			"map_config": null,
+			"name": "幼兒園註冊比例",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
