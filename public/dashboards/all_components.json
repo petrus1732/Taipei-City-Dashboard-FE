@@ -84,7 +84,7 @@
 					"title": "公立幼兒園"
 				}
 			],
-			"name": "危險區域",
+			"name": "危險地點與公立幼兒園",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
@@ -98,34 +98,41 @@
 			"tags": [],
 			"contributors": ["tuic"]
 		},
-		"5": {
-			"id": 5,
-			"index": "circular",
-			"map_config": null,
+		"202": {
+			"id": 202,
+			"index": "child_ratio",
 			"history_data": true,
 			"chart_config": {
 				"color": [
-					"#C5E1A5",
-					"#ADED64",
-					"#7BB661",
-					"#479562",
-					"#357664",
-					"#00563F",
-					"#04432C"
+					"#4B0082",
+					"#483D8B",
+					"#6A5ACD",
+					"#7B68EE",
+					"#8A2BE2",
+					"#9400D3"
 				],
-				"types": ["DonutChart", "BarChart"],
-				"unit": "件"
+				"types": ["TimelineStackedChart", "TimelineSeparateChart"],
+				"unit": "‰",
+				"markers": {
+					"hover": {
+						"size": 3
+					},
+					"size": 0,
+					"strokeWidth": 0
+				}
 			},
-			"name": "臺北市陳情系統",
-			"source": "臺北市陳情系統",
-			"time_from": "2023-05-28T00:00:00+08:00",
-			"time_to": "2023-06-01T00:00:00+08:00",
-			"update_freq": 1,
-			"update_freq_unit": "day",
-			"short_desc": "顯示近一週從週一起臺北市陳情系統所接收到的陳情案件",
-			"long_desc": "顯示近一週從週一起臺北市陳情系統所接收到的陳情案件，資料來源為臺北市陳情系統內部資料，每天更新，並提供一年內每個月的陳情案件總數資料。",
-			"use_case": "透過陳情案件的統計資訊，我們可以追蹤近一週內台北市各行政區收到的陳情案件，也可了解一年內每個月的陳情案件總數變化。",
-			"links": null,
+			"map_config": null,
+			"name": "幼兒年齡占比",
+			"source": "臺北大數據中心",
+			"time_from": "2023-07-28T00:00:00+08:00",
+			"time_to": null,
+			"short_desc": "",
+			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"use_case": "",
+			"links": [
+				"https://tuic.gov.taipei/youbike",
+				"https://github.com/tpe-doit/YouBike-Optimization"
+			],
 			"tags": [],
 			"contributors": ["tuic"]
 		},
@@ -4174,6 +4181,37 @@
 				"https://tuic.gov.taipei/youbike",
 				"https://github.com/tpe-doit/YouBike-Optimization"
 			],
+			"contributors": ["tuic"]
+		},
+		"150": {
+			"id": 150,
+			"index": "polar_test",
+			"map_config": null,
+			"history_data": true,
+			"chart_config": {
+				"color": [
+					"#C5E1A5",
+					"#ADED64",
+					"#7BB661",
+					"#479562",
+					"#357664",
+					"#00563F",
+					"#04432C"
+				],
+				"types": ["PolarChart"],
+				"unit": "件"
+			},
+			"name": "臺北市陳情系統",
+			"source": "臺北市陳情系統",
+			"time_from": "2023-05-28T00:00:00+08:00",
+			"time_to": "2023-06-01T00:00:00+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "day",
+			"short_desc": "顯示近一週從週一起臺北市陳情系統所接收到的陳情案件",
+			"long_desc": "顯示近一週從週一起臺北市陳情系統所接收到的陳情案件，資料來源為臺北市陳情系統內部資料，每天更新，並提供一年內每個月的陳情案件總數資料。",
+			"use_case": "透過陳情案件的統計資訊，我們可以追蹤近一週內台北市各行政區收到的陳情案件，也可了解一年內每個月的陳情案件總數變化。",
+			"links": null,
+			"tags": [],
 			"contributors": ["tuic"]
 		}
 	}
