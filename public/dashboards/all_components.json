@@ -106,7 +106,38 @@
 					"title": "公立幼兒園"
 				}
 			],
-			"name": "危險區域",
+			"name": "危險地點與公立幼兒園",
+			"source": "臺北大數據中心",
+			"time_from": "2023-07-28T00:00:00+08:00",
+			"time_to": null,
+			"short_desc": "",
+			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"use_case": "",
+			"links": [
+				"https://tuic.gov.taipei/youbike",
+				"https://github.com/tpe-doit/YouBike-Optimization"
+			],
+			"tags": [],
+			"contributors": ["tuic"]
+		},
+		"202": {
+			"id": 202,
+			"index": "child_ratio",
+			"history_data": true,
+			"chart_config": {
+				"color": [
+					"#4B0082",
+					"#483D8B",
+					"#6A5ACD",
+					"#7B68EE",
+					"#8A2BE2",
+					"#9400D3"
+				],
+				"types": ["TimelineStackedChart", "TimelineSeparateChart"],
+				"unit": "‰"
+			},
+			"map_config": null,
+			"name": "幼兒年齡占比",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
