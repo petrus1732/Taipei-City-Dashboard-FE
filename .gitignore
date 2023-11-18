@@ -8,6 +8,7 @@
 
 !/public/mapData/unsafety_*
 !/public/mapData/public_*
+/src/dataProcessingXD/LetsGo.ipynb
 
 
 # local env files

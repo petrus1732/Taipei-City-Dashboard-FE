@@ -36,6 +36,7 @@ import MapLegend from "./components/charts/MapLegend.vue";
 import MetroChart from "./components/charts/MetroChart.vue";
 import HeatmapChart from "./components/charts/HeatmapChart.vue";
 import PolarChart from "./components/charts/PolarChart.vue";
+import PyramidChart from "./components/charts/PyramidChart.vue";
 
 const app = createApp(App);
 
@@ -60,5 +61,6 @@ app.component("MapLegend", MapLegend);
 app.component("MetroChart", MetroChart);
 app.component("HeatmapChart", HeatmapChart);
 app.component("PolarChart", PolarChart);
+app.component("PyramidChart", PyramidChart);
 
 app.mount("#app");
