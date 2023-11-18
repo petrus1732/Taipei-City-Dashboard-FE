@@ -91,6 +91,19 @@
 					"type": "symbol",
 					"icon": "danger_zone",
 					"title": "危險地點"
+				},
+				{
+					"index": "public_kindergarten_pos",
+					"property": [
+						{
+							"key": "校園名稱",
+							"name": "校園名稱"
+						},
+						{ "key": "實際就讀人數", "name": "就讀人數" }
+					],
+					"type": "symbol",
+					"icon": "kindergarten",
+					"title": "公立幼兒園"
 				}
 			],
 			"name": "危險區域",

@@ -289,6 +289,9 @@ export const maplayerCommonLayout = {
 	"symbol-danger_zone": {
 		"icon-image": "danger_zone",
 	},
+	"symbol-kindergarten": {
+		"icon-image": "kindergarten",
+	},
 	"symbol-youbike": {
 		"icon-image": [
 			"case",

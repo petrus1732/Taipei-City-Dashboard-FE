@@ -7,6 +7,7 @@
 /public/mapData/*
 
 !/public/mapData/unsafety_*
+!/public/mapData/public_*
 
 
 # local env files
