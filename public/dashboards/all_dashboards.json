@@ -1,6 +1,12 @@
 {
 	"data": [
 		{
+			"name": "住你好孕",
+			"index": "pregancy-good",
+			"components": ["60", "142", "143", "144", "145", "146", "147"],
+			"icon": "crib"
+		},
+		{
 			"name": "YouBike研究",
 			"index": "youbike",
 			"components": ["60", "142", "143", "144", "145", "146", "147"],
