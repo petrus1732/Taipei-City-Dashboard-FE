@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "地點位置": "臺北市大同區捷運中山站", "管轄分局": "大同分局" }, "geometry": { "type": "Point", "coordinates": [ 121.51541, 25.06593 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市萬華區峨嵋街、漢中街口(捷運西門站)", "管轄分局": "萬華分局" }, "geometry": { "type": "Point", "coordinates": [ 121.506959400531528, 25.041499775764326 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市萬華區西園路、和平西路口(捷運龍山寺站)", "管轄分局": "萬華分局" }, "geometry": { "type": "Point", "coordinates": [ 121.494126612551952, 25.03575092409498 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市中山區捷運松江南京站", "管轄分局": "中山分局" }, "geometry": { "type": "Point", "coordinates": [ 121.53331, 25.06443 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市中山區捷運中山國小站", "管轄分局": "中山分局" }, "geometry": { "type": "Point", "coordinates": [ 121.52683, 25.0628 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市大安區捷運忠孝復興站", "管轄分局": "大安分局" }, "geometry": { "type": "Point", "coordinates": [ 121.54304, 25.04157 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市中正區捷運臺北車站", "管轄分局": "中正第一分局" }, "geometry": { "type": "Point", "coordinates": [ 121.51579, 25.04743 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市中正區二二八公園", "管轄分局": "中正第一分局" }, "geometry": { "type": "Point", "coordinates": [ 121.51856, 25.03247 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市中正區捷運古亭站", "管轄分局": "中正第二分局" }, "geometry": { "type": "Point", "coordinates": [ 121.51856, 25.03247 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市松山區新東街9巷", "管轄分局": "松山分局" }, "geometry": { "type": "Point", "coordinates": [ 121.56509513222656, 25.057853563734827 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市信義區松壽路段(松智路至松仁路)", "管轄分局": "信義分局" }, "geometry": { "type": "Point", "coordinates": [ 121.565340483943302, 25.03100858407397 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市北投區捷運劍潭站", "管轄分局": "士林分局" }, "geometry": { "type": "Point", "coordinates": [ 121.50253, 25.13289 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市北投區捷運石牌站", "管轄分局": "北投分局" }, "geometry": { "type": "Point", "coordinates": [ 121.50253, 25.13289 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市文山區指南路道南橋下涵洞附近", "管轄分局": "文山第一分局" }, "geometry": { "type": "Point", "coordinates": [ 121.581002271221394, 24.976912855069347 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市文山區捷運萬芳醫院站", "管轄分局": "文山第二分局" }, "geometry": { "type": "Point", "coordinates": [ 121.5587, 24.9989 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市南港區捷運南港展覽館站", "管轄分局": "南港分局" }, "geometry": { "type": "Point", "coordinates": [ 121.61529, 25.05529 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市內湖區麥帥二橋下河濱公園", "管轄分局": "內湖分局" }, "geometry": { "type": "Point", "coordinates": [ 121.57205743660397, 25.056567398370408 ] } },
+{ "type": "Feature", "properties": { "地點位置": "臺北市內湖區成功路五段420巷", "管轄分局": "內湖分局" }, "geometry": { "type": "Point", "coordinates": [ 121.608558686532874, 25.075589877394542 ] } }
+]
+}
