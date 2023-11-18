@@ -49,31 +49,9 @@
 			"id": 201,
 			"index": "unsafety-zone",
 			"chart_config": {
-				"types": ["HeatmapChart", "BarPercentChart"],
-				"categories": [
-					"國小畢業",
-					"國中畢業",
-					"高中畢業",
-					"專科畢業",
-					"大學畢業",
-					"碩士畢業",
-					"博士畢業"
-				],
-				"color": [
-					"#b9b929",
-					"#87a11a",
-					"#87a11a",
-					"#568811",
-					"#568811",
-					"#568811",
-					"#568811",
-					"#236e0c",
-					"#236e0c",
-					"#236e0c",
-					"#236e0c",
-					"#113011"
-				],
-				"unit": "生育胎次"
+				"color": ["#9072bc"],
+				"types": ["DistrictChart", "RadarChart", "ColumnChart"],
+				"unit": "件"
 			},
 			"map_config": [
 				{
