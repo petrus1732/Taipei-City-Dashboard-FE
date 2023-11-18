@@ -3,6 +3,7 @@
 		"200": {
 			"id": 200,
 			"index": "parity",
+			"history_data": true,
 			"chart_config": {
 				"types": ["HeatmapChart", "BarPercentChart"],
 				"categories": [
