@@ -72,17 +72,25 @@
 					"title": "危險地點"
 				},
 				{
-					"index": "public_kindergarten_pos",
+					"index": "all_kindergarten",
 					"property": [
 						{
-							"key": "校園名稱",
+							"key": "name",
 							"name": "校園名稱"
 						},
-						{ "key": "實際就讀人數", "name": "就讀人數" }
+						{
+							"key": "type",
+							"name": "類型"
+						},
+						{
+							"key": "telephone",
+							"name": "電話"
+						},
+						{ "key": "people", "name": "容量" }
 					],
 					"type": "symbol",
 					"icon": "kindergarten",
-					"title": "公立幼兒園"
+					"title": "幼兒園"
 				}
 			],
 			"name": "危險地點與公立幼兒園",

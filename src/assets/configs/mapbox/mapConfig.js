@@ -290,7 +290,14 @@ export const maplayerCommonLayout = {
 		"icon-image": "danger_zone",
 	},
 	"symbol-kindergarten": {
-		"icon-image": "kindergarten",
+		"icon-image": [
+			"case",
+			["==", ["get", "type"], "公立"],
+			"goverment",
+			["==", ["get", "type"], "私立"],
+			"private_school",
+			"nonprofit",
+		],
 	},
 	"symbol-lactation_room": {
 		"icon-image": [
