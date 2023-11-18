@@ -286,6 +286,12 @@ export const maplayerCommonLayout = {
 	"symbol-triangle_white": {
 		"icon-image": "triangle_white",
 	},
+	"symbol-danger_zone": {
+		"icon-image": "danger_zone",
+	},
+	"symbol-kindergarten": {
+		"icon-image": "kindergarten",
+	},
 	"symbol-youbike": {
 		"icon-image": [
 			"case",

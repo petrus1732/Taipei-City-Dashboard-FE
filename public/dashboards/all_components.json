@@ -31,7 +31,7 @@
 				"unit": "生育胎次"
 			},
 			"map_config": null,
-			"name": "",
+			"name": "生育胎次與生母背景",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
@@ -53,8 +53,38 @@
 				"types": ["DistrictChart", "RadarChart", "ColumnChart"],
 				"unit": "件"
 			},
-			"map_config": null,
-			"name": "",
+			"map_config": [
+				{
+					"index": "unsafety_zone",
+					"property": [
+						{
+							"key": "地點位置",
+							"name": "地點位置"
+						},
+						{
+							"key": "管轄分局",
+							"name": "管轄分局"
+						}
+					],
+					"type": "symbol",
+					"icon": "danger_zone",
+					"title": "危險地點"
+				},
+				{
+					"index": "public_kindergarten_pos",
+					"property": [
+						{
+							"key": "校園名稱",
+							"name": "校園名稱"
+						},
+						{ "key": "實際就讀人數", "name": "就讀人數" }
+					],
+					"type": "symbol",
+					"icon": "kindergarten",
+					"title": "公立幼兒園"
+				}
+			],
+			"name": "危險區域",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,

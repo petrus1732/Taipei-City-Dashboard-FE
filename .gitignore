@@ -1,7 +1,14 @@
 .DS_Store
 /node_modules
 /dist
-/public/mapData
+
+
+
+/public/mapData/*
+
+!/public/mapData/unsafety_*
+!/public/mapData/public_*
+
 
 # local env files
 .env.production
@@ -38,3 +45,4 @@ src/func.py
 src/hackathon_workshop_ETL.ipynb
 src/tp_building_height84.geojson
 src/臺北程式設計節黑客松-工作坊簡報.pdf
+
