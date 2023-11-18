@@ -207,7 +207,7 @@
 			"index": "lactation_room",
 			"chart_config": {
 				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
-				"types": ["ColumnChart", "DistrictChart"],
+				"types": ["ColumnChart", "DistrictChart", "PolarChart"],
 				"map_filter": [
 					"行政區",
 					[

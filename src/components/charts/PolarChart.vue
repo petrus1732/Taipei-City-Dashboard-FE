@@ -110,6 +110,7 @@ const chartOptions = ref({
 		toolbar: {
 			show: false,
 		},
+		height: "500px",
 	},
 	colors: props.chart_config.color,
 	grid: {
@@ -128,6 +129,9 @@ const chartOptions = ref({
 				strokeWidth: 0,
 			},
 		},
+	},
+	dataLabels: {
+		enabled: true,
 	},
 	labels: parsedLabels,
 	tooltip: {
