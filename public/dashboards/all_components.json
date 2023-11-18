@@ -31,7 +31,7 @@
 				"unit": "生育胎次"
 			},
 			"map_config": null,
-			"name": "",
+			"name": "生育胎次與生母背景",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
@@ -75,8 +75,20 @@
 				],
 				"unit": "生育胎次"
 			},
-			"map_config": null,
-			"name": "",
+			"map_config": [
+				{
+					"index": "unsafety_zone",
+					"property": [],
+					"paint": {
+						"circle-color": "#3f51b5",
+						"circle-radius": 100
+					},
+					"type": "circle",
+					"title": "消防栓",
+					"icon": null
+				}
+			],
+			"name": "危險區域",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
