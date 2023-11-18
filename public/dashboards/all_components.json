@@ -134,7 +134,14 @@
 					"#9400D3"
 				],
 				"types": ["TimelineStackedChart", "TimelineSeparateChart"],
-				"unit": "‰"
+				"unit": "‰",
+				"markers": {
+					"hover": {
+						"size": 3
+					},
+					"size": 0,
+					"strokeWidth": 0
+				}
 			},
 			"map_config": null,
 			"name": "幼兒年齡占比",

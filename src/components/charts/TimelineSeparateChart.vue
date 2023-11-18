@@ -26,10 +26,10 @@ const chartOptions = ref({
 	},
 	markers: {
 		hover: {
-			size: 5,
+			size: props.chart_config?.markers?.hover?.size ?? 5,
 		},
-		size: 3,
-		strokeWidth: 0,
+		size: props.chart_config?.markers?.size ?? 3,
+		strokeWidth: props.chart_config?.markers?.strokeWidth ?? 0,
 	},
 	stroke: {
 		colors: props.chart_config.color,
