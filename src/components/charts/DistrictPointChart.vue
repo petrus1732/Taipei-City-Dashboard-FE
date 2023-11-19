@@ -231,6 +231,11 @@ function handleDataSelection(index) {
 				}"
 			>
 				<span
+					v-if="series[index].type === 'special'"
+					class="districtchart-title-legends-special"
+				>{{"&#128314;"}}</span>
+				<span
+					v-if="series[index].type === 'normal'"
 					class="districtchart-title-legends-icon"
 					:style="{
 						backgroundColor: props.chart_config.color[index],
@@ -572,6 +577,14 @@ function handleDataSelection(index) {
 				width: 14px;
 				border-radius: 50%;
 				margin-right: 2px;
+			}
+			&-special {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 14px;
+				margin-right: 2px;
+				font-size: 16px;
 			}
 		}
 		&-legends:hover {
