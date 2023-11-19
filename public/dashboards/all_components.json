@@ -34,23 +34,22 @@
 			"map_config": null,
 			"name": "生育胎次與生母背景",
 			"source": "臺北大數據中心",
-			"time_from": "2023-07-28T00:00:00+08:00",
-			"time_to": null,
-			"short_desc": "",
+			"time_from": "1976-12-31T00:00:00+08:00",
+			"time_to": "2022-12-31T00:00:00+08:00",
+			"short_desc": "顯示生育胎次與生母的背景之間的關聯",
 			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
 			"use_case": "",
 			"links": [
-				"https://tuic.gov.taipei/youbike",
-				"https://github.com/tpe-doit/YouBike-Optimization"
+				"https://data.taipei/dataset/detail?id=2917a751-7282-47c9-94ab-58a758a96192"
 			],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["tuic", "ntueedashboard"]
 		},
 		"201": {
 			"id": 201,
 			"index": "unsafety-zone",
 			"chart_config": {
-				"color": ["#9072bc", "#0072bc", "#909220", "#a00000"] ,
+				"color": ["#9072bc", "#0072bc", "#909220", "#a00000"],
 				"types": ["DistrictPointChart"],
 				"unit": "間"
 			},
@@ -95,17 +94,17 @@
 			],
 			"name": "危險地點與公立幼兒園",
 			"source": "臺北大數據中心",
-			"time_from": "2023-07-28T00:00:00+08:00",
-			"time_to": null,
+			"time_from": "2014-01-01T00:00:00+08:00",
+			"time_to": "2023-06-30T00:00:00+08:00",
 			"short_desc": "",
-			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"long_desc": "",
 			"use_case": "",
 			"links": [
-				"https://tuic.gov.taipei/youbike",
-				"https://github.com/tpe-doit/YouBike-Optimization"
+				"https://data.taipei/dataset/detail?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2",
+				"https://data.taipei/dataset/detail?id=b01796e2-d9dc-4575-9f39-8c4af0fcde12"
 			],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["tuic", "ntueedashboard"]
 		},
 		"202": {
 			"id": 202,
@@ -145,7 +144,7 @@
 				"https://github.com/tpe-doit/YouBike-Optimization"
 			],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["tuic", "ntueedashboard"]
 		},
 		"203": {
 			"id": 203,
@@ -200,7 +199,7 @@
 				"https://github.com/tpe-doit/YouBike-Optimization"
 			],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["tuic", "ntueedashboard"]
 		},
 		"204": {
 			"id": 204,
@@ -261,7 +260,7 @@
 				"https://github.com/tpe-doit/YouBike-Optimization"
 			],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["tuic", "ntueedashboard"]
 		},
 		"205": {
 			"id": 205,
@@ -299,7 +298,7 @@
 				"https://github.com/tpe-doit/YouBike-Optimization"
 			],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["tuic", "ntueedashboard"]
 		},
 		"206": {
 			"id": 206,
@@ -341,7 +340,7 @@
 				"https://github.com/tpe-doit/YouBike-Optimization"
 			],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["tuic", "ntueedashboard"]
 		},
 		"7": {
 			"id": 7,
