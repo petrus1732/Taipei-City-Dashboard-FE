@@ -345,7 +345,7 @@
 					"source": "potential_source"
 				}
 			],
-			"name": "綠地分布",
+			"name": "綠地量能圖",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
