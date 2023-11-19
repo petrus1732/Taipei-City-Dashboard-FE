@@ -272,49 +272,36 @@
 			"index": "income_compare",
 			"history_data": true,
 			"chart_config": {
-				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
-				"types": ["SimpleColChart", "BarPercentChart"],
-				"categories": [
-					" 食品及非酒精飲料",
-					" 菸酒及檳榔",
-					" 衣著鞋襪及服飾用品",
-					" 住宅服務、水電瓦斯及其他燃料",
-					" 家具設備及家務維護",
-					" 醫療保健",
-					" 交通",
-					" 通訊",
-					" 休閒與文化",
-					" 教育",
-					" 餐廳及旅館",
-					" 什項消費",
-					" 儲蓄"
+				"color": [
+					"#FF5733",
+					"#FFC300",
+					"#4CAF50",
+					"#2196F3",
+					"#9C27B0",
+					"#E91E63",
+					"#795548",
+					"#607D8B",
+					"#FF9800",
+					"#3F51B5",
+					"#009688",
+					"#FFEB3B",
+					"#673AB7"
 				],
-				"map_filter": [
-					"行政區",
-					[
-						"北投區",
-						"士林區",
-						"內湖區",
-						"南港區",
-						"松山區",
-						"信義區",
-						"中山區",
-						"大同區",
-						"中正區",
-						"萬華區",
-						"大安區",
-						"文山區"
-					]
+				"types": [
+					"ColumnChart",
+					"TreemapChart",
+					"RadarChart",
+					"PolarChart"
 				],
-				"unit": "%"
+				"unit": ""
 			},
 			"map_config": null,
-			"name": "支出所得占比",
+			"name": "正規化支出類別比例",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
 			"short_desc": "",
-			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"long_desc": "顯示夫妻與核心家庭在各項支出占比的比例。資料來源為臺北大數據中心研究，更新頻率為不定期。",
 			"use_case": "",
 			"links": [
 				"https://tuic.gov.taipei/youbike",
