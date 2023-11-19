@@ -532,6 +532,7 @@ export const useMapStore = defineStore("map", {
 		// Add a filter based on a property on a map layer
 		addLayerFilter(layer_id, property, key, map_config) {
 			const dialogStore = useDialogStore();
+			console.log(layer_id, property, key, map_config);
 			if (!this.map || dialogStore.dialogs.moreInfo) {
 				return;
 			}
@@ -545,6 +546,37 @@ export const useMapStore = defineStore("map", {
 				);
 				map_config.layerId = layer_id;
 				this.AddArcMapLayer(map_config, toBeFiltered);
+				return;
+			} else if (property.length > 1) {
+				let any_filter = ["any"];
+				key[1].forEach((f) =>
+					any_filter.push(["==", ["get", property[1]], f])
+				);
+				any_filter = any_filter.filter((v) => v !== undefined);
+				// console.log(any_filter);
+				// console.log(["==", ["get", property[0]], key[0]]);
+				if (!property[0]?.length) {
+					// console.log(
+					// 	"filter",
+					// 	any_filter.length === 1 ? false : any_filter
+					// );
+					this.map.setFilter(
+						layer_id,
+						any_filter.length === 1 ? false : any_filter
+					);
+				} else {
+					// console.log("filter@", [
+					// 	"all",
+					// 	["==", ["get", property[0]], key[0]],
+					// 	any_filter.length === 1 ? false : any_filter,
+					// ]);
+					this.map.setFilter(layer_id, [
+						"all",
+						["==", ["get", property[0]], key[0]],
+						any_filter.length === 1 ? false : any_filter,
+					]);
+				}
+
 				return;
 			}
 			this.map.setFilter(layer_id, ["==", ["get", property], key]);
