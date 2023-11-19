@@ -50,27 +50,28 @@
 			"id": 201,
 			"index": "unsafety-zone",
 			"chart_config": {
-				"color": ["#9072bc", "#0072bc", "#909220", "#a00000"] ,
+				"color": ["#9072bc", "#0072bc", "#909220", "#a00000"],
 				"types": ["DistrictPointChart"],
-				"unit": "間"
+				"unit": "間",
+				"map_filter": [
+					"district",
+					[
+						"北投區",
+						"士林區",
+						"內湖區",
+						"南港區",
+						"松山區",
+						"信義區",
+						"中山區",
+						"大同區",
+						"中正區",
+						"萬華區",
+						"大安區",
+						"文山區"
+					]
+				]
 			},
 			"map_config": [
-				{
-					"index": "unsafety_zone",
-					"property": [
-						{
-							"key": "地點位置",
-							"name": "地點位置"
-						},
-						{
-							"key": "管轄分局",
-							"name": "管轄分局"
-						}
-					],
-					"type": "symbol",
-					"icon": "danger_zone",
-					"title": "危險地點"
-				},
 				{
 					"index": "all_kindergarten",
 					"property": [
@@ -91,6 +92,22 @@
 					"type": "symbol",
 					"icon": "kindergarten",
 					"title": "幼兒園"
+				},
+				{
+					"index": "unsafety_zone",
+					"property": [
+						{
+							"key": "地點位置",
+							"name": "地點位置"
+						},
+						{
+							"key": "管轄分局",
+							"name": "管轄分局"
+						}
+					],
+					"type": "symbol",
+					"icon": "danger_zone",
+					"title": "危險地點"
 				}
 			],
 			"name": "危險地點與公立幼兒園",
