@@ -110,7 +110,11 @@ export const useMapStore = defineStore("map", {
 					})
 					.addLayer(TaipeiBuilding);
 			}
-
+			this.map.addSource("potential_source", {
+				type: "raster",
+				url: "mapbox://xiguaakako.0l9ig67q",
+				tileSize: 256,
+			});
 			this.addSymbolSources();
 		},
 		// 3. Adds symbols that will be used by some map layers
@@ -166,6 +170,9 @@ export const useMapStore = defineStore("map", {
 				appendLayerId.layerId = mapLayerId;
 				// 1-2. If the layer doesn't exist, call an API to get the layer data
 				this.loadingLayers.push(appendLayerId.layerId);
+				if (appendLayerId.type === "raster") {
+					return this.AddRasterMapLayer(appendLayerId);
+				}
 				this.fetchLocalGeoJson(appendLayerId);
 			});
 		},
@@ -184,6 +191,7 @@ export const useMapStore = defineStore("map", {
 				type: "geojson",
 				data: { ...data },
 			});
+			// console.log(map_config);
 			if (map_config.type === "arc") {
 				this.AddArcMapLayer(map_config, data);
 			} else {
@@ -235,6 +243,72 @@ export const useMapStore = defineStore("map", {
 					...extra_layout_configs,
 				},
 				source: `${map_config.layerId}-source`,
+			});
+			this.currentLayers.push(map_config.layerId);
+			this.mapConfigs[map_config.layerId] = map_config;
+			this.currentVisibleLayers.push(map_config.layerId);
+			this.loadingLayers = this.loadingLayers.filter(
+				(el) => el !== map_config.layerId
+			);
+		},
+		AddRasterMapLayer(map_config) {
+			console.log(map_config);
+			let extra_paint_configs = {};
+			let extra_layout_configs = {};
+			if (map_config.icon) {
+				extra_paint_configs = {
+					...maplayerCommonPaint[
+						`${map_config.type}-${map_config.icon}`
+					],
+				};
+				extra_layout_configs = {
+					...maplayerCommonLayout[
+						`${map_config.type}-${map_config.icon}`
+					],
+				};
+			}
+			if (map_config.size) {
+				extra_paint_configs = {
+					...extra_paint_configs,
+					...maplayerCommonPaint[
+						`${map_config.type}-${map_config.size}`
+					],
+				};
+				extra_layout_configs = {
+					...extra_layout_configs,
+					...maplayerCommonLayout[
+						`${map_config.type}-${map_config.size}`
+					],
+				};
+			}
+			this.loadingLayers.push("rendering");
+			console.log({
+				id: map_config.layerId,
+				type: map_config.type,
+				paint: {
+					// ...maplayerCommonPaint[`${map_config.type}`],
+					// ...extra_paint_configs,
+					// ...map_config.paint,
+				},
+				layout: {
+					// ...maplayerCommonLayout[`${map_config.type}`],
+					// ...extra_layout_configs,
+				},
+				source: `${map_config.source}`,
+			});
+			this.map.addLayer({
+				id: map_config.layerId,
+				type: map_config.type,
+				paint: {
+					// ...maplayerCommonPaint[`${map_config.type}`],
+					// ...extra_paint_configs,
+					// ...map_config.paint,
+				},
+				layout: {
+					// ...maplayerCommonLayout[`${map_config.type}`],
+					// ...extra_layout_configs,
+				},
+				source: `${map_config.source}`,
 			});
 			this.currentLayers.push(map_config.layerId);
 			this.mapConfigs[map_config.layerId] = map_config;
