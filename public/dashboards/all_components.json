@@ -242,10 +242,6 @@
 						{
 							"key": "開放時間",
 							"name": "開放時間"
-						},
-						{
-							"key": "行政區",
-							"name": "行政區"
 						}
 					],
 					"type": "symbol",
@@ -287,12 +283,7 @@
 					"#FFEB3B",
 					"#673AB7"
 				],
-				"types": [
-					"ColumnChart",
-					"TreemapChart",
-					"RadarChart",
-					"PolarChart"
-				],
+				"types": ["ColumnChart", "RadarChart", "PolarChart"],
 				"unit": ""
 			},
 			"map_config": null,
@@ -315,11 +306,11 @@
 			"index": "park_potential",
 			"chart_config": {
 				"color": [
-					"#000080",
-					"#0000FF",
-					"#6495ED",
-					"#87CEEB",
-					"#ADD8E6"
+					"#006400",
+					"#008000",
+					"#00FF00",
+					"#7FFF00",
+					"#ADFF2F"
 				],
 				"types": [
 					"ColumnChart",
@@ -338,12 +329,12 @@
 					"source": "potential_source"
 				}
 			],
-			"name": "位能圖",
+			"name": "綠地分布",
 			"source": "臺北大數據中心",
 			"time_from": "2023-07-28T00:00:00+08:00",
 			"time_to": null,
 			"short_desc": "",
-			"long_desc": "顯示夫妻與核心家庭在各項支出占比的比例。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"long_desc": "顯示親子遊憩的去處。資料來源為臺北大數據中心研究，更新頻率為不定期。",
 			"use_case": "",
 			"links": [
 				"https://tuic.gov.taipei/youbike",

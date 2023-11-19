@@ -1,8 +1,8 @@
 {
 	"data": [
 		{
-			"name": "住你好孕",
-			"index": "pregancy-good",
+			"name": "祝你好孕",
+			"index": "born-in-Taipei",
 			"components": ["200", "201", "202", "203", "204", "205", "206"],
 			"icon": "crib"
 		},
