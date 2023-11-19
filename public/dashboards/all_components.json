@@ -207,7 +207,7 @@
 			"index": "lactation_room",
 			"chart_config": {
 				"color": ["#9c7a3e", "#b7e28e", "#7febd0", "#8ce8ff"],
-				"types": ["ColumnChart", "DistrictChart"],
+				"types": ["ColumnChart", "DistrictChart", "PolarChart"],
 				"map_filter": [
 					"行政區",
 					[
@@ -242,10 +242,6 @@
 						{
 							"key": "開放時間",
 							"name": "開放時間"
-						},
-						{
-							"key": "行政區",
-							"name": "行政區"
 						}
 					],
 					"type": "symbol",
@@ -259,6 +255,86 @@
 			"time_to": null,
 			"short_desc": "",
 			"long_desc": "顯示生育胎次與生母的背景之間的關聯，生母的背景由縱軸的年齡與橫軸的教育程度呈現。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"use_case": "",
+			"links": [
+				"https://tuic.gov.taipei/youbike",
+				"https://github.com/tpe-doit/YouBike-Optimization"
+			],
+			"tags": [],
+			"contributors": ["tuic"]
+		},
+		"205": {
+			"id": 205,
+			"index": "income_compare",
+			"history_data": true,
+			"chart_config": {
+				"color": [
+					"#FF5733",
+					"#FFC300",
+					"#4CAF50",
+					"#2196F3",
+					"#9C27B0",
+					"#E91E63",
+					"#795548",
+					"#607D8B",
+					"#FF9800",
+					"#3F51B5",
+					"#009688",
+					"#FFEB3B",
+					"#673AB7"
+				],
+				"types": ["ColumnChart", "RadarChart", "PolarChart"],
+				"unit": ""
+			},
+			"map_config": null,
+			"name": "正規化支出類別比例",
+			"source": "臺北大數據中心",
+			"time_from": "2023-07-28T00:00:00+08:00",
+			"time_to": null,
+			"short_desc": "",
+			"long_desc": "顯示夫妻與核心家庭在各項支出占比的比例。資料來源為臺北大數據中心研究，更新頻率為不定期。",
+			"use_case": "",
+			"links": [
+				"https://tuic.gov.taipei/youbike",
+				"https://github.com/tpe-doit/YouBike-Optimization"
+			],
+			"tags": [],
+			"contributors": ["tuic"]
+		},
+		"206": {
+			"id": 206,
+			"index": "park_potential",
+			"chart_config": {
+				"color": [
+					"#006400",
+					"#008000",
+					"#00FF00",
+					"#7FFF00",
+					"#ADFF2F"
+				],
+				"types": [
+					"ColumnChart",
+					"TreemapChart",
+					"DistrictChart",
+					"PolarChart"
+				],
+				"unit": "座"
+			},
+			"map_config": [
+				{
+					"index": "potential",
+					"property": [],
+					"type": "raster",
+					"title": "位能",
+					"source": "potential_source"
+				}
+			],
+			"name": "綠地分布",
+			"source": "臺北大數據中心",
+			"time_from": "2023-07-28T00:00:00+08:00",
+			"time_to": null,
+			"short_desc": "",
+			"long_desc": "顯示親子遊憩的去處。資料來源為臺北大數據中心研究，更新頻率為不定期。",
 			"use_case": "",
 			"links": [
 				"https://tuic.gov.taipei/youbike",

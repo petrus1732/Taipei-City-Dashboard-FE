@@ -37,7 +37,7 @@ import MetroChart from "./components/charts/MetroChart.vue";
 import HeatmapChart from "./components/charts/HeatmapChart.vue";
 import PolarChart from "./components/charts/PolarChart.vue";
 import PyramidChart from "./components/charts/PyramidChart.vue";
-
+import SimpleColChart from "./components/charts/SimpleColChart.vue";
 const app = createApp(App);
 
 // Add Core Packages: Vue-Router, Pinia, Apexcharts
@@ -62,5 +62,6 @@ app.component("MetroChart", MetroChart);
 app.component("HeatmapChart", HeatmapChart);
 app.component("PolarChart", PolarChart);
 app.component("PyramidChart", PyramidChart);
+app.component("SimpleColChart", SimpleColChart);
 
 app.mount("#app");

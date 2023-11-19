@@ -9,6 +9,7 @@
 !/public/mapData/unsafety_*
 !/public/mapData/public_*
 !/public/mapData/lactation_*
+!/public/mapData/all_kinder*
 /src/dataProcessingXD/LetsGo.ipynb
 
 
