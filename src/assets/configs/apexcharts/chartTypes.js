@@ -13,4 +13,5 @@ export const chartTypes = {
 	HeatmapChart: "熱力圖",
 	PolarChart: "極座標圖",
 	PyramidChart: "金字塔圖",
+	SimpleColChart: "並列長條圖",
 };
