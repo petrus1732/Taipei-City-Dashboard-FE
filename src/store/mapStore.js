@@ -547,7 +547,7 @@ export const useMapStore = defineStore("map", {
 				map_config.layerId = layer_id;
 				this.AddArcMapLayer(map_config, toBeFiltered);
 				return;
-			} else if (property.length > 1) {
+			} else if (Array.isArray(property) && property.length > 1) {
 				let any_filter = ["any"];
 				key[1].forEach((f) =>
 					any_filter.push(["==", ["get", property[1]], f])
