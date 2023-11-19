@@ -2,8 +2,15 @@
 
 <script setup>
 import { ref, computed, defineProps } from "vue";
+import { useMapStore } from "../../store/mapStore";
+const mapStore = useMapStore();
 
-const props = defineProps(["chart_config", "activeChart", "series"]);
+const props = defineProps([
+	"chart_config",
+	"activeChart",
+	"series",
+	"map_config",
+]);
 
 const chartOptions1 = ref({
 	chart: {
@@ -94,6 +101,7 @@ const chartOptions1 = ref({
 		},
 	},
 });
+const selectedIndex = ref(null);
 
 const parsedSeries = computed(() => {
 	const toParse = [...props.series[0].data];
@@ -153,6 +161,25 @@ const chartOptions = ref({
 	},
 });
 
+function handleDataSelection(e, chartContext, config) {
+	if (!props.chart_config.map_filter) {
+		return;
+	}
+	const toFilter = config.dataPointIndex;
+	if (toFilter !== selectedIndex.value) {
+		mapStore.addLayerFilter(
+			`${props.map_config[0].index}-${props.map_config[0].type}`,
+			props.chart_config.map_filter[0],
+			props.chart_config.map_filter[1][toFilter]
+		);
+		selectedIndex.value = toFilter;
+	} else {
+		mapStore.clearLayerFilter(
+			`${props.map_config[0].index}-${props.map_config[0].type}`
+		);
+		selectedIndex.value = null;
+	}
+}
 // console.log(parsedSeries);
 </script>
 
@@ -163,6 +190,7 @@ const chartOptions = ref({
 			type="polarArea"
 			:options="chartOptions"
 			:series="parsedSeries"
+			@dataPointSelection="handleDataSelection"
 		></apexchart>
 	</div>
 </template>
